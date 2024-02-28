@@ -174,7 +174,7 @@ const Home = () => {
   };
 
   return (
-    <Container>
+    <Container className="part-1">
       <h1 className="title">Start Traveling with Ease!!</h1>
       <div className="centered">
         <input
