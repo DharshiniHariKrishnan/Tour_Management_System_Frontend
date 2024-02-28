@@ -106,6 +106,9 @@ import React, { useState, useEffect } from "react";
 import "../styles/home.css";
 import { Container } from "reactstrap";
 import { useNavigate } from "react-router-dom";
+import part2icon1 from "../assets/images/part2icon1.png";
+import part2icon2 from "../assets/images/part2icon2.png";
+import part2icon3 from "../assets/images/part2icon3.png";
 
 const Home = () => {
   const [searchInput, setSearchInput] = useState("");
@@ -200,6 +203,61 @@ const Home = () => {
           </ul>
         )}
       </div>
+      <Container className="part-2">
+      <p className="heading" > We Provide Best Travel Experience</p>
+      <p>Your gateway to amazing destinations!</p>
+      <section className="boxs">
+          <div className="box">
+            <p className="subheading">
+              <span > 
+            <img className="icon1" src={part2icon1} />
+            </span><br/>
+            Select Destination</p>
+            <p className="p">At first choose the place you wanted to go.</p>
+          </div>
+          <div className="box">
+            <p className="subheading" >              <span > 
+            <img className="icon1" src={part2icon2} />
+            </span><br/>
+            Book a Trip</p>
+            <p className="p">Book your tip form our exclusive offers.</p>
+          </div>
+         <div className="box">
+            <p className="subheading" >
+            <span > 
+            <img className="icon1" src={part2icon3} />
+            </span><br/>
+            Take your flight</p>
+            <p className="p">Take your flight on selected date and joy.</p>
+          </div>
+        </section>
+      </Container>
+      {/* <section className="part-3 " >
+                    <div className="place-info">
+                      <h3>New York</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Voluptatum, quasi, quibusdam.
+                      </p>
+                    </div>
+                    <div className="place-info">
+                      <h3>China</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Voluptatum, quasi, quibusdam.
+                      </p>
+                    </div>
+                <div className="place-info">
+                      <h3>Japan</h3>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Voluptatum, quasi, quibusdam.
+                      </p>
+                    </div>
+
+
+        </section> */}
+
     </Container>
   );
 };
