@@ -46,11 +46,11 @@ const ExploreCities = () => {
         {exploreCity.images && (
           exploreCity.images.map((image, index) => (
             <div key={index} className="image-container">
-              {/* <img
+              { <img
                 className="image"
-                // src={image.image_url}
-                // alt={image.image_name}
-              /> */}
+                src={image.image_url}
+                alt={image.image_name}
+              /> }
             </div>
           ))
         )}
