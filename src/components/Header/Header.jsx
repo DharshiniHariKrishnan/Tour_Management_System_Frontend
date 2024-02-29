@@ -5,6 +5,7 @@ import Logo from "../../assets/images/logo.png";
 import "./header.css";
 import { AuthContext } from "../Auth/AuthContext";
 
+
 const nav__links = [
   {
     path: "/home",
@@ -13,8 +14,13 @@ const nav__links = [
   {
     path: "/about",
     display: "About",
-  }
+  },
+  {
+    path: "/itinerary",
+    display: "Tours",
+  },
 ];
+
 
 const Header = () => {
   const headerRef = useRef(null);
