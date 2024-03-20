@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import ExploreCities from "../pages/ExploreCities"
 import SearchHotels from "../pages/SearchHotels"
+import SearchTransportation from "../pages/SearchTransportation"
 const Router = () => {
   return (
     <Routes>
@@ -12,6 +13,7 @@ const Router = () => {
       <Route path="/about" element={<About />} />
       <Route path="/explore" element={<ExploreCities />} />
       <Route path="/search-hotels" element={<SearchHotels />} />
+      <Route path="/search-transportation" element={<SearchTransportation />} />
     </Routes>
   );
 };
