@@ -40,7 +40,7 @@ const ExploreCities = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Explore {exploreCity.Place_name}!</h1>
+      <h1 className="exploretitle">Explore {exploreCity.Place_name}!</h1>
       <h2 className="information">{exploreCity.information}</h2>
       <div className="image-section">
         {exploreCity.images && (
