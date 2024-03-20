@@ -7,6 +7,14 @@
     margin-bottom: 20px;
   }
 
+  .exploretitle {
+    font-size: 42px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+  }
+
   .information {
     font-size: 20px;
     text-align: center;
