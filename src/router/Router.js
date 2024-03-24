@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Login from "../pages/Login";
-import ExploreCities from "../pages/ExploreCities"
-import SearchHotels from "../pages/SearchHotels"
-import SearchTransportation from "../pages/SearchTransportation"
-import Register from "../pages/Register";
+import Home from "../pages/Home.jsx";
+import About from "../pages/About.jsx";
+import Login from "../pages/Login.jsx";
+import ExploreCities from "../pages/ExploreCities.jsx"
+import SearchHotels from "../pages/SearchHotels.jsx"
+import SearchTransportation from "../pages/SearchTransportation.jsx"
+import Register from "../pages/Register.jsx";
 
 const Router = () => {
   return (

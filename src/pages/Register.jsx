@@ -1,84 +1,107 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom'
-import { Container } from "reactstrap";
-import "../styles/login.css";
+import React, { useEffect, useState } from "react";
+import Image from "../assets/images/image.png";
+import Logo from "../assets/images/logo.png";
+import GoogleSvg from "../assets/images/icons8-google.svg";
+import { FaEye } from "react-icons/fa6";
+import { FaEyeSlash } from "react-icons/fa6";
+import "../styles/Register.css";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { toast } from "react-toastify";
 
-const Register = (props) => {
-  const [email, setEmail] = useState('')
-  const [fname, setFName] = useState('')
-  const [lname, setLName] = useState('')
-  const [password, setPassword] = useState('')
-  const [emailError, setEmailError] = useState('')
-  const [passwordError, setPasswordError] = useState('')
 
-  const navigate = useNavigate()
 
-  const onButtonClick = () => {
-    // update later
+
+const Login = () => {
+  const [ showPassword, setShowPassword ] = useState(false);
+  const navigate = useNavigate();
+  const [ token, setToken ] = useState(JSON.parse(localStorage.getItem("auth")) || "");
+
+
+
+  const handleRegisterSubmit = async (e) => {
+    e.preventDefault();
+    let name = e.target.name.value;
+    let lastname = e.target.lastname.value;
+    let email = e.target.email.value;
+    let password = e.target.password.value;
+    let confirmPassword = e.target.confirmPassword.value;
+
+    if(name.length > 0 && lastname.length > 0 && email.length > 0 && password.length > 0 && confirmPassword.length > 0){
+
+      if(password === confirmPassword){
+        const formData = {
+          username: name + " " + lastname,
+          email,
+          password
+        };
+        try{
+        const response = await axios.post("http://localhost:3000/api/v1/register", formData);
+         toast.success("Registration successfull");
+         navigate("/login");
+       }catch(err){
+         toast.error(err.message);
+       }
+      }else{
+        toast.error("Passwords don't match");
+      }
+    
+
+    }else{
+      toast.error("Please fill all inputs");
+    }
+
+
   }
 
+  useEffect(() => {
+    if(token !== ""){
+      toast.success("You already logged in");
+      navigate("/home");
+    }
+  }, []);
+
   return (
-    <div className={'mainContainer'}>
-      <div className={'titleContainer'}>
-        <div>Sign Up</div>
+    <div className="register-main">
+      <div className="register-left">
+        <img src={Image} alt="" />
       </div>
-      <br />
+      <div className="register-right">
+        <div className="register-right-container">
+          <div className="register-logo">
+            <img src={Logo} alt="" />
+          </div>
+          <div className="register-center">
+            <h2>Tour Management</h2>
+            <p>Please enter your details</p>
+            <form onSubmit={handleRegisterSubmit}>
+            <input type="text" placeholder="Name" name="name" required={true} />
+            <input type="text" placeholder="Lastname" name="lastname" required={true} />
+              <input type="email" placeholder="Email" name="email" required={true} />
+              <div className="pass-input-div">
+                <input type={showPassword ? "text" : "password"} placeholder="Password" name="password" required={true} />
+                {showPassword ? <FaEyeSlash onClick={() => {setShowPassword(!showPassword)}} /> : <FaEye onClick={() => {setShowPassword(!showPassword)}} />}
+                
+              </div>
+              <div className="pass-input-div">
+                <input type={showPassword ? "text" : "password"} placeholder="Confirm Password" name="confirmPassword" required={true} />
+                {showPassword ? <FaEyeSlash onClick={() => {setShowPassword(!showPassword)}} /> : <FaEye onClick={() => {setShowPassword(!showPassword)}} />}
+                
+              </div>
+              <div className="register-center-buttons">
+                <button type="submit">Sign Up</button>
+                
+              </div>
+            </form>
+          </div>
 
-      <div className={'inputContainer'}>
-        <input
-          value={fname}
-          placeholder="First Name"
-          onChange={(ev) => setFName(ev.target.value)}
-          className={'inputBox'}
-        />
-
-        <label className="errorLabel">{emailError}</label>
-      </div>
-
-      <div className={'inputContainer'}>
-        <input
-          value={lname}
-          placeholder="Last Name"
-          onChange={(ev) => setLName(ev.target.value)}
-          className={'inputBox'}
-        />
-
-        <label className="errorLabel">{emailError}</label>
-      </div>
-      <br />
-      <div className={'inputContainer'}>
-        <input
-          value={email}
-          placeholder="Email"
-          onChange={(ev) => setEmail(ev.target.value)}
-          className={'inputBox'}
-        />
-        <label className="errorLabel">{emailError}</label>
-      </div>
-      <div className={'inputContainer'}>
-        <input
-          value={password}
-          placeholder="Password"
-          onChange={(ev) => setPassword(ev.target.value)}
-          className={'inputBox'}
-        />
-        <label className="errorLabel">{passwordError}</label>
-      </div>
-      <div className={'inputContainer'}>
-        <input
-          value={password}
-          placeholder="Confirm password"
-          onChange={(ev) => setPassword(ev.target.value)}
-          className={'inputBox'}
-        />
-        <label className="errorLabel">{passwordError}</label>
-      </div>
-      <br />
-      <div className={'inputContainer'}>
-        <input className={'inputButton'} type="button" onClick={onButtonClick} value={'Register'} />
+          <p className="login-bottom-p">
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Login;
