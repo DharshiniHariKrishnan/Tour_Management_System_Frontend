@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 import { Container } from "reactstrap";
-import "../styles/login.css";
+import "../styles/register.css";
 
 const Register = (props) => {
   const [email, setEmail] = useState('')
@@ -19,6 +19,7 @@ const Register = (props) => {
 
   return (
     <div className={'mainContainer'}>
+      <div className={'regInput'}>
       <div className={'titleContainer'}>
         <div>Sign Up</div>
       </div>
@@ -45,7 +46,6 @@ const Register = (props) => {
 
         <label className="errorLabel">{emailError}</label>
       </div>
-      <br />
       <div className={'inputContainer'}>
         <input
           value={email}
@@ -77,6 +77,7 @@ const Register = (props) => {
       <div className={'inputContainer'}>
         <input className={'inputButton'} type="button" onClick={onButtonClick} value={'Register'} />
       </div>
+    </div>
     </div>
   )
 }

@@ -3,9 +3,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    background-image: url("https://t3.ftcdn.net/jpg/01/07/11/08/360_F_107110831_1YViwsEhl1tdAdO3niaID4wdG6MgDvk5.jpg");
+    background-color: #cccccc;
+    height: 1500px;
   }
   
+  .boxShadow{
+    width: 300px;
+    height: 1000px;
+    padding: 15px;
+    background-color: red;
+    box-shadow: 5px 5px 5px ;
+
+    background-image: url("https://t3.ftcdn.net/jpg/01/07/11/08/360_F_107110831_1YViwsEhl1tdAdO3niaID4wdG6MgDvk5.jpg");
+    background-color: #cccccc;
+  }
+
+  .loginInput{
+    height: 500px;
+    width: 500px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    box-shadow: 10px 10px 5px;
+    background-color: white;
+
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   .titleContainer {
     display: flex;
     flex-direction: column;
@@ -39,15 +69,23 @@
     align-items: center;
     justify-content: center;
     height: 260px;
+
+
+    
   }
   
   .inputContainer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: center;   
+
+    
   }
   
+  
+
+
   .inputContainer > .errorLabel {
     color: red;
     font-size: 12px;
