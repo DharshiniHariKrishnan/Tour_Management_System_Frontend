@@ -7,6 +7,7 @@ import ExploreCities from "../pages/ExploreCities"
 import SearchHotels from "../pages/SearchHotels"
 import SearchTransportation from "../pages/SearchTransportation"
 import Register from "../pages/Register";
+import Itinerary from "../pages/Itinerary";
 
 const Router = () => {
   return (
@@ -19,6 +20,7 @@ const Router = () => {
       <Route path="/search-transportation" element={<SearchTransportation />} />
       <Route path="/login" element={<Login />} /> 
       <Route path="/register" element={<Register />} /> 
+      <Route path="/itinerary" element={<Itinerary />} />
     </Routes>
   );
 };

@@ -63,7 +63,9 @@ const SearchHotels = () => {
         }
       );
       if (response.ok) {
+        
         const data = await response.json();
+        console.log(data)
         setAllHotels(data);
         setHotelByCurrentFilter(data);
         return data;
@@ -77,6 +79,7 @@ const SearchHotels = () => {
   };
 
   const filterHotelsByName = () => {
+    
     const searchQuery = hotelSearch.toLowerCase();
     const filtered = allHotels.filter((hotel) => {
       return (
