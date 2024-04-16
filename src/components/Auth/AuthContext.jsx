@@ -1,5 +1,5 @@
 import { createContext, useEffect, useReducer } from "react";
-
+console.log(localStorage.getItem("user"))
 const initial_state = {
   // user: localStorage.getItem("user") !== undefined ? JSON.stringify(localStorage.getItem("user")) : null,
   // user: localStorage.getItem("user") !== undefined ? localStorage.getItem("user") : null,
@@ -10,6 +10,17 @@ const initial_state = {
   loading: false,
   error: null,
 };
+
+// const userItem = localStorage.getItem("user");
+// console.log(userItem)
+// const user =
+//   userItem !== null ? JSON.parse(userItem) : null;
+
+// const initial_state = {
+//   user,
+//   loading: false,
+//   error: null,
+// };
 
 export const AuthContext = createContext(initial_state);
 
