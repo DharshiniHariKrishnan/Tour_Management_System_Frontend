@@ -155,8 +155,10 @@ const SearchHotels = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Search for hotels in {exploreCity.place_name}:</h1>
-
+      
+      <h1 className="title">Find deals for any season</h1>
+      <p>From cozy bed & breakfasts to luxury hotels</p>
+      
       <div className="search-section">
         <input
           type="text"
@@ -228,7 +230,7 @@ const SearchHotels = () => {
       </div>
 
       <div className="hotel-results">
-        <h1>Hotel Results:</h1>
+        <h1 className="title">Hotel Results:</h1>
         {hotelByCurrentFilter.map((hotel, index) => (
           <div key={index} className="hotel-container">
             <Link to={`/hotel?hotelname=${hotel._id}`}>

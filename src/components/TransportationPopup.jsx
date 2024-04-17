@@ -53,7 +53,7 @@ const TransportationPopup = ({ onClose, onSubmit, selectedTransportation }) => {
     <div className="popup">
       <div className="popup-inner">
         <br></br>
-        <h2 className="transportation-title">Enter details: </h2>
+        <h2 className="transportation-title">Enter details:</h2>
         <label htmlFor="numTravelersPopup">Number of Travelers:</label>
         <input
           type="number"
@@ -113,7 +113,10 @@ const TransportationPopup = ({ onClose, onSubmit, selectedTransportation }) => {
           onChange={handleEmailChanges}
           placeholder="Enter your Mail Id"
         />
-    <button className="search-button" onClick={handleSubmit}>Submit</button>
+        <br></br>
+    <button className="search-button" onClick={handleSubmit}>
+      Submit
+    </button>
       </div>
     </div>
   );

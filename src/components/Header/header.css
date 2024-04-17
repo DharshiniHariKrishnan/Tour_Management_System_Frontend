@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #4499fa8d;
+  --primary-color: #589ff18d;
   --secondary-color: #6dd2eb;
   --heading-color: #000000;
   --text-color: #000000;
@@ -12,6 +12,7 @@
   width: 100%;
   height: 80px;
   line-height: 80px;
+
 }
 
 .logo img {

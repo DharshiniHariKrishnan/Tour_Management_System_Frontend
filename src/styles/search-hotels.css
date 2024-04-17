@@ -1,4 +1,13 @@
 
+.title {
+  color: black; 
+  font-size: 60px; 
+}
+p {
+  color: #333;  /* Sets the text color to a dark gray */
+  font-size: 20px; /* Sets the font size */
+  margin-bottom: 10px; /* Adds space below paragraphs */
+}
   input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -56,14 +65,14 @@
   }
   
   .hotel-container {
-    border: 1px solid #ddd;
+    border: 1px solid #040101;
     padding: 15px;
     border-radius: 8px;
     background-color: #fff;
   }
 
   .filters p {
-    font-size: 18px;
+    font-size: 24px;
     color: black;
   }
 

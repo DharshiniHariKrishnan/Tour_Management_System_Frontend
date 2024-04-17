@@ -124,7 +124,7 @@ const SearchTransportation = () => {
 
   return (
     <div className="transportation-container">
-      <h1 className="transportation-title">Find transportation to {exploreCity.place_name}:</h1>
+      <h1 className="title">Wherever you're headed, we'll help you get there</h1>
       <div className="input-container">
         <div>
           <label htmlFor="departureCitySelect">Departure City:</label>
