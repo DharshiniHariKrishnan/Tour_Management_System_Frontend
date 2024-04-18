@@ -87,7 +87,8 @@ import React, { useState } from "react";
 import { Button, Row, Col, Form, Container, FormGroup } from "reactstrap";
 import { Link } from "react-router-dom";
 import "../styles/login.css";
-import loginimage from "../assets/images/loginimage.png";
+import loginimage from "../assets/images/World-Travel-PNG-Image.png";
+import registerImg from "../assets/images/luggage.png";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
@@ -147,10 +148,13 @@ const Register = () => {
           {/* <Col lg="8" className="m-auto"> */}
           <div className="login__container d-flex justify-content-between">
             <div className="login__image">
-              <img src={""} alt="" />
+              <img src={loginimage} alt="" height={700}/>
             </div>
             <div className="login__form">
-              <h2>Register</h2>
+            <div className="regImg">
+                  <img src={registerImg} alt="" height={250} width={250}/>
+                </div>
+                <h2><strong>Register</strong></h2>
               <Form className="form" onSubmit={handleclick}>
                 <FormGroup>
                   <input
@@ -218,7 +222,7 @@ const Register = () => {
               </p>
             </div>
           </div>
-          {/* </Col> */}
+         {/* </Col> */}
         </Row>)}
       </Container>
     </section>
