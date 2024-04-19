@@ -1,11 +1,9 @@
-
-
 import React, { useContext, useState } from "react";
 import { Container, Row, Col, Form, FormGroup, Button } from "reactstrap";
 import "../styles/login.css";
 import { Link, useNavigate } from "react-router-dom";
-import loginimage from "../assets/images/loginimage.png";
-import user from "../assets/images/user.png";
+import loginimage from "../assets/images/World-Travel-PNG-Image.png";
+import welcomeback from "../assets/images/luggage.png";
 import { AuthContext } from "../components/Auth/AuthContext";
 import { BASE_URL } from "../utils/config";
 
@@ -52,19 +50,20 @@ const Login = () => {
     <section>
       <Container>
         <Row>
-          <Col lg="8" className="m-auto">
-            <div className="login__container d-flex justify-content-between">
+          {/*<Col lg="8" className="m-auto">*/}
+            <div class="login__container d-flex justify-content-between">
               <div className="login__img">
-                <img src={""} alt="" />
+                <img src={loginimage} alt=""  height={700} />
               </div>
 
               <div className="login__form">
-                <div className="user">
-                  <img src={user} alt="" />
+                <div className="welcomeBack">
+                  <img src={welcomeback} alt="" height={250} width={250}/>
                 </div>
-                <h2>Login</h2>
+                <h2><strong>Login</strong></h2>
 
-                <Form onSubmit={handleClick}>
+
+                <Form onSubmit={handleClick} className="form">
                   <FormGroup>
                     <input
                       type="email"
@@ -100,14 +99,14 @@ const Login = () => {
                   </Button>
                 </Form>
                 <p>
-                  Don't have an account? <Link to="/register">Create</Link>
+                  Don't have an account?<br></br><Link to="/register">Create</Link>
                 </p>
                 <p>
-                  Forgot Password? Recover using this link <Link to="/recoverpassword">Forgot Password</Link>
+                  Forgot Password?<br></br><Link to="/recoverpassword">Forgot Password</Link>
                 </p>
               </div>
             </div>
-          </Col>
+          {/*</Col>*/}
         </Row>
       </Container>
     </section>
