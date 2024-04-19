@@ -51,7 +51,7 @@ const Login = () => {
       <Container>
         <Row>
           {/*<Col lg="8" className="m-auto">*/}
-            <div className="login__container d-flex justify-content-between">
+            <div class="login__container d-flex justify-content-between">
               <div className="login__img">
                 <img src={loginimage} alt=""  height={700} />
               </div>
