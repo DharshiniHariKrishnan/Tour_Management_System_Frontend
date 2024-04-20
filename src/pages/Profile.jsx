@@ -16,7 +16,7 @@ const Profile = () => {
         if (loggedIn) {
             const fetchUserData = async () => {
                 try {
-                    const response = await fetch('http://localhost:4000/user/profile', {
+                    const response = await fetch('https://backend-latest-rsbd.onrender.com/user/profile', {
                         // still setting this up to connect to API
                     });
                     if (response.status !== 200) throw new Error('Failed to fetch user data');

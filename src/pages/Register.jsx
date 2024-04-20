@@ -116,7 +116,7 @@ const Register = () => {
     console.log(credentials);
 
     try {
-      const response = await axios.post("http://localhost:4000/auth/register", {
+      const response = await axios.post("https://backend-latest-rsbd.onrender.com/auth/register", {
         name: credentials.username,
         email: credentials.email,
         password: credentials.password,

@@ -59,7 +59,7 @@ const Hotel = () => {
 
     const fetchHotelData = async (hotelId) => {
         try {
-            const response = await fetch(`http://localhost:4000/get-accommodation-by-id/id?accommodationId=${hotelId}`);
+            const response = await fetch(`https://backend-latest-rsbd.onrender.com/get-accommodation-by-id/id?accommodationId=${hotelId}`);
             if (response.status === 200) {
                 const data = await response.json();
                 console.log("Fetched Hotel Data:", data); // Log the hotel data
@@ -130,7 +130,7 @@ const Hotel = () => {
         };
     
         try {
-            const response = await fetch(`http://localhost:4000/add-accomodationitinerary`, {
+            const response = await fetch(`https://backend-latest-rsbd.onrender.com/add-accomodationitinerary`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(bookingData)
@@ -173,7 +173,7 @@ const Hotel = () => {
         };
     
         try {
-            const response = await fetch('http://localhost:4000/add-accommodation-review', {
+            const response = await fetch('https://backend-latest-rsbd.onrender.com/add-accommodation-review', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(reviewData)

@@ -14,7 +14,7 @@ const PasswordRecoveryForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:4000/auth/password-recovery", {
+      const response = await axios.post("https://backend-latest-rsbd.onrender.com/auth/password-recovery", {
         email: email,
         securityquestion1: securityQuestion1,
         securityquestion2: securityQuestion2,

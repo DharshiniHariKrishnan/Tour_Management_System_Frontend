@@ -13,7 +13,7 @@ const ExploreCities = () => {
       if (selectedCity) {
         try {
           const response = await fetch(
-            `http://localhost:4000/search-place/placename?p=${selectedCity}`,
+            `https://backend-latest-rsbd.onrender.com/search-place/placename?p=${selectedCity}`,
             {
               method: "GET",
               headers: {

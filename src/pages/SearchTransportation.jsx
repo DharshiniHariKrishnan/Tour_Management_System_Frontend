@@ -32,7 +32,7 @@ const SearchTransportation = () => {
       if (destinationCity) {
         try {
           const response = await fetch(
-            `http://localhost:4000/search-place/placename?p=${destinationCity}`,
+            `https://backend-latest-rsbd.onrender.com/search-place/placename?p=${destinationCity}`,
             {
               method: "GET",
               headers: {
@@ -79,7 +79,7 @@ const SearchTransportation = () => {
   const handlePopupSubmit = async ({ numTravelers, departureDate, returnDate }) => {
     console.log("Submitted Data:", { numTravelers, departureDate, returnDate });
     try {
-      const response = await axios.post("http://localhost:4000/api/submititinerary", {
+      const response = await axios.post("https://backend-latest-rsbd.onrender.com/api/submititinerary", {
         num_travelers: numTravelers,
         departure_date: departureDate,
         return_date: returnDate,
@@ -96,7 +96,7 @@ const SearchTransportation = () => {
 
     const fetchTransportationData = async () => {
       try {
-        const response = await fetch(`http://localhost:4000/search-mode/travelmode?city=${destinationCity}`, {
+        const response = await fetch(`https://backend-latest-rsbd.onrender.com/search-mode/travelmode?city=${destinationCity}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

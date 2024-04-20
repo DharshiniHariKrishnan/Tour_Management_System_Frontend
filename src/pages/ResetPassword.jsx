@@ -13,7 +13,7 @@ function PasswordReset() {
     e.preventDefault();
     console.log(token)
     try {
-      const response = await axios.post("http://localhost:4000/auth/reset-password", {
+      const response = await axios.post("https://backend-latest-rsbd.onrender.com/auth/reset-password", {
           token: token,
           newPassword: newPassword,
       });
