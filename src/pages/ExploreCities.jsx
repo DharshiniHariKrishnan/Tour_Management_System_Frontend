@@ -42,6 +42,14 @@ const ExploreCities = () => {
     <div className="container">
       <h1 className="exploretitle">Explore {exploreCity.Place_name}!</h1>
       <h2 className="information">{exploreCity.information}</h2>
+      <div className="buttons">
+        <Link to={`/search-hotels?city=${selectedCity}`}>
+          <button className="search-button"> Find Hotels</button>
+        </Link>
+        <Link to={`/search-transportation?city=${selectedCity}`}>
+          <button className="search-button"> Find Transportation</button>
+        </Link>
+      </div>
       <div className="image-section">
         {exploreCity.images && (
           exploreCity.images.map((image, index) => (
@@ -55,16 +63,6 @@ const ExploreCities = () => {
           ))
         )}
       </div>
-
-      <div className="buttons">
-        <Link to={`/search-hotels?city=${selectedCity}`}>
-          <button className="search-button">Click here to find hotels</button>
-        </Link>
-        <Link to={`/search-transportation?city=${selectedCity}`}>
-          <button className="search-button">Click here to find transportation</button>
-        </Link>
-      </div>
-
     </div> 
   );
 };

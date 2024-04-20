@@ -124,9 +124,9 @@ const SearchTransportation = () => {
 
   return (
     <div className="transportation-container">
-      <h1 className="transportation-title">Find transportation to {exploreCity.place_name}:</h1>
+      <div className="body1">
       <div className="input-container">
-        <div>
+        <div className="departureCitySelect">
           <label htmlFor="departureCitySelect">Departure City:</label>
           <select id="departureCitySelect" value={departureCity} onChange={handleDepartureCityChange}>
             <option value="">Select Departure City</option>
@@ -138,6 +138,7 @@ const SearchTransportation = () => {
           </select>
         </div>  
       </div> 
+      
       <button className="search-button" onClick={() => fetchTransportationData()}>
         Show Results
       </button>
@@ -151,6 +152,7 @@ const SearchTransportation = () => {
           <p><b>Dropoff Location:</b> {item.arrival}</p>
           <p><b>Duration:</b> {item.duration}</p>
           <p><b>Bus/Flight Number:</b> {item.vehicle_number}</p>
+          
           <p><b>Airline/Bus Co.:</b> {item.name}</p>
           <button style={{display: 'block', margin: '0 auto'}} className="search-button" onClick={() => handleResultClick(item)}>
             Book
@@ -158,14 +160,16 @@ const SearchTransportation = () => {
         </div>
          ))}
        </div>
+       <div className="popup">
        {showPopup && selectedTransportation && (
-  <TransportationPopup
-    selectedTransportation={selectedTransportation}
-    onClose={handleClosePopup}
-    onSubmit={handlePopupSubmit}
+  <TransportationPopup selectedTransportation={selectedTransportation}
+  onClose={handleClosePopup}
+  onSubmit={handlePopupSubmit}
   />
+  
 )}
-
+</div>
+</div>
      </div>
    );
  };
