@@ -10,7 +10,7 @@
 //   const navigate = useNavigate();
 
 //   const handleCitySelection = (city) => {
-//     fetch(`http://localhost:4000/search-place/placename?p=${city}`, {
+//     fetch(`https://backend-latest-rsbd.onrender.com/search-place/placename?p=${city}`, {
 //       method: "GET",
 //       headers: {
 //         "Content-Type": "application/json",
@@ -33,7 +33,7 @@
 //       setNoResults(false);
 
 //       const response = await fetch(
-//         `http://localhost:4000/search/autocomplete?q=${searchInput}`,
+//         `https://backend-latest-rsbd.onrender.com/search/autocomplete?q=${searchInput}`,
 //         {
 //           method: "GET",
 //           headers: {
@@ -117,7 +117,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const handleCitySelection = (city) => {
-    fetch(`http://localhost:4000/search-place/placename?p=${city}`, {
+    fetch(`https://backend-latest-rsbd.onrender.com/search-place/placename?p=${city}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -140,7 +140,7 @@ const Home = () => {
       setNoResults(false);
 
       const response = await fetch(
-        `http://localhost:4000/search/autocomplete?q=${searchInput}`,
+        `https://backend-latest-rsbd.onrender.com/search/autocomplete?q=${searchInput}`,
         {
           method: "GET",
           headers: {

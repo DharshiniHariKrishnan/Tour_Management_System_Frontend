@@ -45,7 +45,7 @@
 
 //   const fetchHotelData = async (hotelId) => {
 //     try {
-//         const response = await fetch(`http://localhost:4000/get-accommodation-by-id/id?accommodationId=${hotelId}`);
+//         const response = await fetch(`https://backend-latest-rsbd.onrender.com/get-accommodation-by-id/id?accommodationId=${hotelId}`);
 //         if (response.status === 200) {
 //             const data = await response.json();
 //             // Check if data is an array and not empty, then use the first element
@@ -63,7 +63,7 @@
 // const fetchItineraryData = async () => {
 //     if (loggedIn && userID) {
 //         try {
-//             const response = await fetch(`http://localhost:4000/fetch-useritinerary/getUserItinerary?userId=${userID}`);
+//             const response = await fetch(`https://backend-latest-rsbd.onrender.com/fetch-useritinerary/getUserItinerary?userId=${userID}`);
 //             if (response.status !== 200) {
 //                 throw new Error('Failed to fetch itinerary data');
 //             }
@@ -110,7 +110,7 @@
 //     };
   
 //     try {
-//       const response = await fetch('http://localhost:4000/add-comment-itinerary', {
+//       const response = await fetch('https://backend-latest-rsbd.onrender.com/add-comment-itinerary', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify(commentData)
@@ -142,7 +142,7 @@
 //     }
 
 //     try {
-//       const response = await fetch('http://localhost:4000/api/sendItineraryEmail', {
+//       const response = await fetch('https://backend-latest-rsbd.onrender.com/api/sendItineraryEmail', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({ uid_user: userID })
@@ -171,7 +171,7 @@
 //     }
 
 //     try {
-//       const response = await fetch('http://localhost:4000/api/sendItineraryEmail', {
+//       const response = await fetch('https://backend-latest-rsbd.onrender.com/api/sendItineraryEmail', {
 //         method: 'POST',
 //         headers: { 'Content-Type': 'application/json' },
 //         body: JSON.stringify({ uid_user: userID, recipientEmail })
@@ -257,7 +257,7 @@
 //     const fetchItineraryData = async () => {
 //         if (loggedIn) {
 //           try {
-//             const response = await fetch(`http://localhost:4000/fetch-useritinerary?userId=${userID}`);
+//             const response = await fetch(`https://backend-latest-rsbd.onrender.com/fetch-useritinerary?userId=${userID}`);
 //             if (response.status !== 200) throw new Error('Failed to fetch itinerary data');
 //             const data = await response.json();
 //             setHotelData(data.accomodation);
@@ -457,7 +457,7 @@ const Itinerary = () => {
 
   const fetchHotelData = async (hotelId) => {
     try {
-        const response = await fetch(`http://localhost:4000/get-accommodation-by-id/id?accommodationId=${hotelId}`);
+        const response = await fetch(`https://backend-latest-rsbd.onrender.com/get-accommodation-by-id/id?accommodationId=${hotelId}`);
         if (response.status === 200) {
             const data = await response.json();
             // Check if data is an array and not empty, then use the first element
@@ -475,7 +475,7 @@ const Itinerary = () => {
 const fetchItineraryData = async () => {
     if (loggedIn && userID) {
         try {
-            const response = await fetch(`http://localhost:4000/fetch-useritinerary/getUserItinerary?userId=${userID}`);
+            const response = await fetch(`https://backend-latest-rsbd.onrender.com/fetch-useritinerary/getUserItinerary?userId=${userID}`);
             if (response.status !== 200) {
                 throw new Error('Failed to fetch itinerary data');
             }
@@ -522,7 +522,7 @@ useEffect(() => {
     };
   
     try {
-      const response = await fetch('http://localhost:4000/add-comment-itinerary', {
+      const response = await fetch('https://backend-latest-rsbd.onrender.com/add-comment-itinerary', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(commentData)
@@ -554,7 +554,7 @@ useEffect(() => {
     }
 
     try {
-      const response = await fetch('http://localhost:4000/api/sendItineraryEmail', {
+      const response = await fetch('https://backend-latest-rsbd.onrender.com/api/sendItineraryEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid_user: userID })
@@ -583,7 +583,7 @@ useEffect(() => {
     }
 
     try {
-      const response = await fetch('http://localhost:4000/api/sendItineraryEmail', {
+      const response = await fetch('https://backend-latest-rsbd.onrender.com/api/sendItineraryEmail', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ uid_user: userID, recipientEmail })
@@ -669,7 +669,7 @@ useEffect(() => {
     const fetchItineraryData = async () => {
         if (loggedIn) {
           try {
-            const response = await fetch(`http://localhost:4000/fetch-useritinerary?userId=${userID}`);
+            const response = await fetch(`https://backend-latest-rsbd.onrender.com/fetch-useritinerary?userId=${userID}`);
             if (response.status !== 200) throw new Error('Failed to fetch itinerary data');
             const data = await response.json();
             setHotelData(data.accomodation);

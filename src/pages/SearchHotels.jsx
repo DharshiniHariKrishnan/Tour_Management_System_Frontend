@@ -28,7 +28,7 @@ const SearchHotels = () => {
       if (selectedCity) {
         try {
           const response = await fetch(
-            `http://localhost:4000/search-place/placename?p=${selectedCity}`,
+            `https://backend-latest-rsbd.onrender.com/search-place/placename?p=${selectedCity}`,
             {
               method: "GET",
               headers: {
@@ -54,7 +54,7 @@ const SearchHotels = () => {
 
   const getAllHotels = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/search-accommodation/place?city=${selectedCity}`,       
+      const response = await fetch(`https://backend-latest-rsbd.onrender.com/search-accommodation/place?city=${selectedCity}`,       
         {
           method: "GET",
           headers: {

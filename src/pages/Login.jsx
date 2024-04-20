@@ -29,7 +29,7 @@ const Login = () => {
     dispatch({ type: "LOGIN_START" });
 
     try {
-      const res = await fetch(`http://localhost:4000/auth/login`, {
+      const res = await fetch(`https://backend-latest-rsbd.onrender.com/auth/login`, {
         method: "post",
         headers: {
           "content-type": "application/json",
