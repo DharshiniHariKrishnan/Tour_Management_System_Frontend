@@ -13,7 +13,7 @@ const ExploreCities = () => {
       if (selectedCity) {
         try {
           const response = await fetch(
-            `https://backend-latest-rsbd.onrender.com/search-place/placename?p=${selectedCity}`,
+            `http://localhost:4000/search-place/placename?p=${selectedCity}`,
             {
               method: "GET",
               headers: {
@@ -58,10 +58,10 @@ const ExploreCities = () => {
 
       <div className="buttons">
         <Link to={`/search-hotels?city=${selectedCity}`}>
-          <button className="search-button">Click here to find hotels</button>
+          <button className="search-button">Hotels</button>
         </Link>
         <Link to={`/search-transportation?city=${selectedCity}`}>
-          <button className="search-button">Click here to find transportation</button>
+          <button className="search-button">Transportation</button>
         </Link>
       </div>
 

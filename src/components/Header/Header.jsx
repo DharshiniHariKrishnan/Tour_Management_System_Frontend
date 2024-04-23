@@ -60,9 +60,9 @@ const Header = () => {
         <Row>
           <div className="nav__wrapper d-flex align-items-center justify-content-between">
             {/* ========== LOGO ========== */}
-            <div className="logo">
+            {/* <div className="logo">
               <img src={Logo} alt="" />
-            </div>
+            </div> */}
             {/* ========================== */}
 
             {/* ========== MENU START ========== */}
